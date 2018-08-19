@@ -6,11 +6,11 @@
  * https://libstock.mikroe.com/projects/view/1437/seeedstudio-arduino-tick-tock-shield-demo
  * 
  * Modified by David Chao (2018-08-19):
- * Use TimerOne ISR to provide the 1 sec LED blinking, instead of 
- * using the delay() in the main loop. The key can now be scanned
- * at higher frequence and improving  key responseness.
- * A variable key repeat rate is also added to speed up clock 
- * adjustment. And general cleaning up.
+ * Use TimerOne ISR to toggle the 1 sec LED blinking. Old method 
+ * uses a delay() in the main loop. The key can now be scanned
+ * at higher frequence to improve the key responses.
+ * A variable key repeat rate is also added to make clock 
+ * adjustment faster. Plus general cleaning up.
  */
  
 #include <Wire.h>
@@ -145,7 +145,6 @@ float R_inf = 0.0;
 //0~9,A,b,C,d,E,F,"-"," "
 //a(18) c(19) d(20) e(21) f(22) h(23) i(24) m(25) 
 //n(26) o(27) p(28) r(29) s(30) t(31) u(32) 
-//Alt: const PROGMEM unsigned char segmap[33] = 
 const PROGMEM unsigned char segmap[33] = 
 {
   0x3F, 0x06, 0x5B, 
