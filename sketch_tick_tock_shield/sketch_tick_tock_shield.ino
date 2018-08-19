@@ -145,7 +145,7 @@ float R_inf = 0.0;
 //0~9,A,b,C,d,E,F,"-"," "
 //a(18) c(19) d(20) e(21) f(22) h(23) i(24) m(25) 
 //n(26) o(27) p(28) r(29) s(30) t(31) u(32) 
-const PROGMEM unsigned char segmap[33] = 
+const unsigned char segmap[33] = 
 {
   0x3F, 0x06, 0x5B, 
   0x4F, 0x66, 0x6D, 
@@ -545,11 +545,11 @@ void display_data(unsigned char value, unsigned char location)
 
   if ( (sec_dp_blink == true) && (mode == time_disp) )
   {
-    TM1636_write_byte( pgm_read_byte_near( segmap+value ) | Display_colon );
+    TM1636_write_byte( segmap[value]  | Display_colon );
   }
   else
   {
-    TM1636_write_byte( pgm_read_byte_near( segmap+value) );
+    TM1636_write_byte( segmap[value] );
   }
   
   TM1636_ack();
