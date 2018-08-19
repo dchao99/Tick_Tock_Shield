@@ -7,10 +7,11 @@
  * 
  * Modified by David Chao (2018-08-19):
  * Use TimerOne ISR to toggle the 1 sec LED blinking. Old method 
- * uses a delay() in the main loop. The key can now be scanned
- * at higher frequence to improve the key responses.
- * A variable key repeat rate is also added to make clock 
- * adjustment faster. Plus general cleaning up.
+ * uses a delay() in the main loop to control the timing, this 
+ * causes the key response to be sluggish (at 500ms). The keys can 
+ * now be scanned at a higher frequence to improve key response.
+ * A variable key repeat rate is also added to make menu and clock 
+ * adjustments easier. Plus general cleaning up.
  */
  
 #include <Wire.h>
