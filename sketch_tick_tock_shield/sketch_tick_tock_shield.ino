@@ -6,7 +6,7 @@
  * https://libstock.mikroe.com/projects/view/1437/seeedstudio-arduino-tick-tock-shield-demo
  * 
  * Modified by David Chao (2018-08-19):
- * Use TimerOne ISR to toggle 1Hz LED at 500ms, moving it out of the main 
+ * Use TimerOne ISR to toggle the 1Hz LED at 500ms, moving it out of the main 
  * loop. The old method causes the keys to be scanned at the same rate as the
  * blinking LED. The keys can now be scanned independently at a higher rate to 
  * improve key response.  A variable key repeat rate is also implemented to 
