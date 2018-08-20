@@ -6,12 +6,12 @@
  * https://libstock.mikroe.com/projects/view/1437/seeedstudio-arduino-tick-tock-shield-demo
  * 
  * Modified by David Chao (2018-08-19):
- * Use TimerOne ISR to toggle LED at 1Hz. Old method uses a delay() in
- * the main loop to control both key scanning and LED blink rate, this 
- * causes the a sluggish key response  (500ms scan rate). The keys 
- * can now be scanned at a higher frequence to improve key response.
- * A variable key repeat rate is also added to make menu and clock 
- * adjustments easier. Plus general cleaning up.
+ * Use TimerOne ISR to toggle LED at 1Hz. Old method uses a delay() in the
+ * main loop to control both key scanning and LED blink rate, this causes  
+ * a sluggish key response  (500ms scan rate). The keys can now be scanned 
+ * at a higher rate to improve key response.
+ * A variable key repeat rate is also added to make menu and clock adjustments
+ * faster. Plus general cleaning up.
  */
  
 #include <Wire.h>
